@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang=en>
+
+	<head>
+		<meta charset=utf-8>
+		<title>birdviz</title>
+		<meta name=description content="">
+		<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+		<meta name="keywords " content="birdviz，宾鸟，车载系统，iPad车载系统，后装车机，iPad车机"/>
+		<link rel=stylesheet href=css/jquery.fullPage.css>
+		<link rel=stylesheet href=css/base.css>
+		<link rel=stylesheet href=css/main.css> </head>
+
+	<body>
+		<div class=bz-container>
+			<div class=bz-header>
+				<div class=bz-header-wrap>
+					<h1 class=bz-header-logo>birdviz</h1>
+					<ul class=bz-header-list>
+						<li><a href=index.html>首页</a></li>
+						<li><a href=app.html>应用</a></li>
+						<li><a href=hardware.html>硬件</a></li>
+						<li><a href=about.html>关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id=J_fullpage class="bz-page bz-app">
+				<div class="section bz-section1">
+					<div class=bz-wrap>
+						<ul id=J_threeD class=three-d>
+							<li href=javascript:; class=three-d1> <img src=images/slider/1.jpg> </li>
+							<li href=javascript:; class=three-d2> <img src=images/slider/3.jpg> </li>
+							<li href=javascript:; class=three-d3> <img src=images/slider/2.jpg> </li>
+						</ul> <i class=bz-app-line1></i> <i class=bz-app-line2></i>
+						<div class=""></div>
+					</div>
+				</div>
+				<div class="section bz-section2">
+					<div class=bz-wrap>
+						<div class="bz-add bz-add1">
+							<div class="bz-add-img bz-add1-img"></div>
+							<div class="bz-add-ctn bz-add1-ctn">
+								<h3>一台收音机，两种听法</h3>
+								<p>传统听法：搜台－>选台－>收听</p>
+								<p>新尝试：选择喜欢的节目类型，无论何时何地只有喜欢的节目</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section bz-section3">
+					<div class=bz-wrap>
+						<div class="bz-add bz-add2">
+							<div class="bz-add-img bz-add2-img"> <i class=bz-add2-icon1></i> <i class=bz-add2-icon2></i> <i class=bz-add2-icon3></i> <i class=bz-add2-icon4></i> </div>
+							<div class="bz-add-ctn bz-add2-ctn">
+								<h3>音乐播放，带心情飞</h3>
+								<p>iPad本地音源，支持其他播放器</p>
+								<p>蓝牙播放，音乐共享</p>
+								<p>车内音响播放</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section bz-section4">
+					<div class=bz-wrap>
+						<div class="bz-add bz-add3">
+							<div class="bz-add-img bz-add3-img"></div>
+							<div class="bz-add-ctn bz-add3-ctn">
+								<h3>蓝牙通话，安全驾驶</h3>
+								<p>蓝牙自动连接</p>
+								<p>音乐，收音机自动静音</p>
+								<p>驾驶中禁止使用拨号键盘拨打</p>
+								<p>语音拨号</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section bz-section5">
+					<div class=bz-wrap>
+						<div class="bz-add bz-add4">
+							<div class="bz-add-img bz-add4-img"></div>
+							<div class="bz-add-ctn bz-add4-ctn">
+								<h3>地图导航，出行全无忧</h3>
+								<p>地点查询，说出你的目的地</p>
+								<p>实时路况</p>
+								<p>路线规划</p>
+								<p>即使在隧道、地库也不会迷失方向</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=bz-app-nav id=J_app_nav> <a href=#page2 class="active J_nav_item">收音机</a> <a href=#page3 class=J_nav_item>音乐</a> <a href=#page4 class=J_nav_item>蓝牙电话</a> <a href=#page5 class=J_nav_item>导航</a> </div>
+		</div>
+		<script src=js/jquery.min.js></script>
+		<script src=js/jquery.fullPage.min.js></script>
+		<script src=js/main.js></script>
+		<script src=js/jquery.threeD.js></script>
+		<script type=text/javascript>
+			var appNav = $('#J_app_nav');
+			        var opt = {
+			            'verticalCentered': false,
+			            'anchors': ['page1', 'page2', 'page3', 'page4', 'page5'],
+			            'navigation': true,
+			            navigationColor: 'white',
+			            onLeave: function(index, nextIndex){
+			                if(nextIndex != 1){
+			                    appNav.show();
+			                }else{
+			                    appNav.hide();
+			                }
+			                $('.J_nav_item').eq(nextIndex - 2).addClass('active').siblings().removeClass('active');
+			            }
+			        };
+			        BZ.fullpage($('#J_fullpage'), opt);
+			        BZ.navToggleClass(appNav);
+			        $('#J_threeD').threeD();
+		</script>
+		<script src=js/baidu.hm.js></script>
+	</body>
+
+</html>

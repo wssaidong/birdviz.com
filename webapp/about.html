@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang=en>
+
+	<head>
+		<meta charset=utf-8>
+		<title>birdviz</title>
+		<meta name=description content="">
+		<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+		<meta name="keywords " content="birdviz，宾鸟，车载系统，iPad车载系统，后装车机，iPad车机"/>
+		<link rel=stylesheet href=css/base.css>
+		<link rel=stylesheet href=css/main.css> </head>
+
+	<body>
+		<div id=J_loading class=bz-loading> <img src=images/loading.gif alt=""> </div>
+		<div class=bz-container>
+			<div class=bz-header>
+				<div class=bz-header-wrap>
+					<h1 class=bz-header-logo>birdviz</h1>
+					<ul class=bz-header-list>
+						<li><a href=index.html>首页</a></li>
+						<li><a href=app.html>应用</a></li>
+						<li><a href=hardware.html>硬件</a></li>
+						<li><a href=about.html>关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bz-page bz-about">
+				<div class=bz-wrap>
+					<h3>我们是一群想改善车载应用的工程</h3>
+					<ul id=J_about_slide>
+						<li class=bz-about-weibo>
+							<a href=#><img src=images/about/weibo.png height=158 width=195></a>
+							<p><a href="http://weibo.com/u/5489611724" target="_Blank">微博关注我们吧</a></p>
+						</li>
+						<li class=bz-about-collaboretion> <img src=images/about/collaboration.png height=119 width=164> </li>
+						<!--<li class=bz-about-code> -->
+						<li class=bz-about-weibo>
+							<img src=images/about/code.png width=180> 
+							<p>分享给好友吧！</p>
+						</li>
+						<li class=bz-about-contact> <img src=images/about/contact.png height=146 width=104>
+							<p> 
+								公司名称：宾鸟(北京)科技有限公司<br>
+								®邮件：<a href="mailto:support@birdviz.com">support@birdviz.com</a><br>
+								北京市朝阳区安华里五区21号楼4层
+							</p>
+						</li>
+					</ul>
+					<a href=javascript:; id=J_slideBtnPre class="bz-about-btn bz-about-preBtn"></a>
+					<a href=javascript:; id=J_slideBtnNext class="bz-about-btn bz-about-nextBtn"></a>
+					
+				</div>
+			</div>
+		</div>
+		<script src=js/jquery.min.js></script>
+		<script src=js/jquery.roundabout.js></script>
+		<script src=js/main.js></script>
+		<script type=text/javascript>
+			var aboutSide = $('#J_about_slide');
+			    aboutSide.roundabout({
+			        minScale: 0.8,
+			        maxScale: 1,
+			        duration: 750
+			    });
+			    $('#J_slideBtnPre').on('click', function () {
+			        aboutSide.roundabout('animateToNextChild');
+			
+			        return false;
+			    });
+			
+			    $('#J_slideBtnNext').on('click', function () {
+			        aboutSide.roundabout('animateToPreviousChild');
+			
+			        return false;
+			    });
+		</script>
+		<script src=js/baidu.hm.js></script>
+	</body>
+
+</html>
